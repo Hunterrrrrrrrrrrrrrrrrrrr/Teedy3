@@ -93,6 +93,20 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.3</version>
+        <configuration>
+          <!-- 忽略警告 -->
+          <failOnWarnings>false</failOnWarnings>
+          <!-- 忽略错误（慎用，仅临时解决） -->
+          <failOnError>false</failOnError>
+          <!-- 指定 Java 版本 -->
+          <source>17</source>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>${org.apache.maven.plugins.maven-war-plugin.version}</version>
       </plugin>
